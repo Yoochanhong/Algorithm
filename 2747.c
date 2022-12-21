@@ -1,15 +1,17 @@
 #include <stdio.h>
 
-int main(){
+int arr[10000] = {0, 1};
 
-    int n;
-    int a = 0, b = 1, sum = 0;
-    scanf("%d", &n);
-    for (int i = 0; i<n; i++){
-        sum = a + b;
-        a = b;
-        b = sum;
+int fibo(int n) {
+    for (int i = 2; i < n + 1; i++) {
+        arr[i] = arr[i - 1] + arr[i - 2];
     }
-    printf("%d", a);
+    return arr[n];
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d", fibo(n));
     return 0;
 }

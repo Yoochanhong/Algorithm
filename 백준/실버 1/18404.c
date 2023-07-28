@@ -9,8 +9,7 @@ element queue[100000];
 int main() {
     int dx[] = {-2, -2, -1, -1, 1, 1, 2, 2};
     int dy[] = {-1, 1, -2, 2, -2, 2, -1, 1};
-    int n, m, x, y, arr[2002];
-    int vis[501][501] = {0};
+    int n, m, x, y, arr[2002], vis[501][501] = {0};
     scanf("%d %d %d %d", &n, &m, &x, &y);
     for (int i = 0; i < m * 2; i += 2) {
         scanf("%d %d", &arr[i], &arr[i + 1]);
